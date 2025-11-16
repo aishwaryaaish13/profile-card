@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Founder Cards</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .info h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .info p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .logo {
+            margin-top: 10px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <div class="info">
+                <h3>Vijay Shekhar Sharma</h3>
+                <p>Founder & CEO</p>
+                <img src="data:image/png;base64,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" class="logo">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/Rectangle_427_637d69bb57.png" alt="">
+            <div class="info">
+                <h3>Kunal Shah</h3>
+                <p>Founder</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAACUCAMAAADVs1c8AAAAZlBMVEUAAAD////4+PiQkJDo6OhfX19paWnz8/NISEioqKjGxsbw8PCXl5dvb2+MjIy8vLzc3Nx/f39QUFBDQ0MPDw+GhoYwMDBZWVk2NjZ1dXXV1dUaGhrNzc3i4uK2trYfHx+fn58mJiZrjsXiAAAEeElEQVR4nO2b2ZajIBBAwSXucV+jqP//k1MF2NskdqbnnFZy6r7YRh64XVgWoIwRBEEQBEEQBEEQBEEQBEEQBEGcm6q92s9zbY/u77f4g/UvZOvRHf4O1+H/gucf3eHvAKHQvTyHO5ghFDzdOH01oZCEfp/PQnX8iAtePrtQxb4KTY/zW8fOL4R8Fhq86C4W5yUzUchN7iNMFXpEbL2WULW8mpB5EbrF6T3GTjYyUCi37ifrQjYyUOhqcS/7iykyNkIgZBd/41aykZlCyeNGZgrljxtVi3EP1n2hWz0OhtVy+0Ksut3w8DpCGhOFqr3G5gkFY1rsNDZPaOSOu9PYPKGQO3tro68jVOT1yl5IqIo97rNXEjK2UngYIVNrufBrllvlboO5QiO3xMcHUSEWPJgrFHNuZUGnr5XBxCOMmLlCtxi3i6ZelqJxhn/jGrCZQmqCVwoLohT6zEUdvqhoGSk0JTIuzA89MEEdTzTyl6aejEvbLnTZEq5SSgZcA4pSFbP5MqIguhkkxC5pBA46xa3xMIheNbjgGIwCecGoHby1l4FY1IPH91WwugCzRKpHoyFCjo7FWmPns/r94pzL2ymZ5VmVO9zbmy6dggLv/rCt5Fx1tTGzDa1ejetx/8u56rMWI+jszmhPQSkiVHKreYXONkIOsUvF1kQKqCHIZjeUeeL8PvCvv2CeduC2l729CA+TQC8P24S8DcDaS3fWIk/FnI8W5oNSnt1kdgAdK1UVAysWTOqhPjOCTuaDQa9kdbbMDr16rDJ7At0pb47r3k/Acg0k9ORhjadc54IcM0NUzwf27Yd0Kju0HwfWTVYJUWBYdDZarBYs0W6p7OYK1BGnf5g+pEpCCxOeKrELrBIgMxzcqf+jqQdZAHU4uwO5MDF0tL3T2ZgdhgArCMc2MBfcIVY7yI5tQl3wFAWUCc7b0sIrUPXL3qI9QRAEQRCEsax+qWepVekD5br9roHzm7piQrXqBmM2hGrFpwvxPcZhVJso/aBfbMwZK9WV8PyT8Vh/EJXhZnG3fR0VotF1e/F0YczfrgwnL1pr7KQl5z8Qowbn3PJsgcFVW1x+psZjJaSuZKde3e5w0cBnLMk80UmhCbxyzqdCComtIQg5jVoJT8/8GV4A/ZN3RSs/p0Eh0Kss7iihlM3zjBkDhKJSH8886CIefVyv1kLFW4QmIUQKI05GCIXwnRL7oM4+Q/T5lgAhTyy4PoJxq/XL6QN7F8LN2Oe/CPt9IhmKN5otl8n3Se4KwY/LAR19FrgjPq4jqiwHClvfw8J1XVw4fRtygj/zcuphQD4bZIjyK3YXhJwk9/Q4/Jrl8NmUQPTOvDI8Q0hGO+mXSEZFJQUIQoA1DgiN+M1uUqrsll9yfAwvp65/EtxxiHBreOg2oVLnPnywOoBnqwdr5FhbEXFikkzd+akccpF8AMXQ7UZXEV9LH1Ee3OFvqaA6TWPVzTUdUWwexxHSXDIqsDjtQvxLXE8eHoIgCIIgCIIgCIIgCIIgCIIgCIIgCII4kD+lXUmj/HWP9QAAAABJRU5ErkJggg==" class="logo">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/amrish_rau_pine_labs_144e5e587c.jpg" alt="">
+            <div class="info">
+                <h3>Amrish Rau</h3>
+                <p>CEO</p>
+                <img src="data:image/jpeg;base64,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" class="logo">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="">
+            <div class="info">
+                <h3>Sampad Swain</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="data:image/jpeg;base64,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" class="logo">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="">
+            <div class="info">
+                <h3>Ankush Sachdeva</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHbq4jmBBDiGLgjdoc0dELhZ_iHfmdN3USwg&s" class="logo">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg" alt="">
+            <div class="info">
+                <h3>Bhanu Pratap Singh</h3>
+                <p>Co-Founder & CTO</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHbq4jmBBDiGLgjdoc0dELhZ_iHfmdN3USwg&s" class="logo">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/farid_ahsan_sharechat_1251f28141.png" alt="">
+            <div class="info">
+                <h3>Farid Ahsan</h3>
+                <p>Co-Founder & COO</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHbq4jmBBDiGLgjdoc0dELhZ_iHfmdN3USwg&s" class="logo">
+            </div>
+        </div>
+
+    
+        <div class="card">
+            <img src="https://cdn.masaischool.com/masai-website/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg" alt="">
+            <div class="info">
+                <h3>Amit Kumar Agarwal</h3>
+                <p>Founder & CEO</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Y5D6vX2T4fgz_FgW8K6XI4pBW9VsIUCv1w&s" class="logo">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
