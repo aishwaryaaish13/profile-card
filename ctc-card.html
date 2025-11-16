@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Highest & Average CTC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#d7c7f0; 
+      --panel:#d3bfeb;
+      --card:#ffffff;
+      --muted:#7a6f78;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Segoe UI,Arial,sans-serif;background:#fafafa}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .panel{
+      background:var(--panel);
+      border-radius:24px;
+      padding:36px 28px;
+      width:360px;
+      max-width:92vw;
+      box-shadow:0 6px 20px rgba(20,12,40,0.06);
+      display:flex;flex-direction:column;align-items:center;
+      gap:22px;
+    }
+    .title{
+      color:#2f1650;
+      font-weight:800;
+      font-size:28px;
+      text-align:center;
+      line-height:1.05;
+      font-style:italic;
+      margin-top:4px;
+    }
+    .stack{width:100%;display:flex;flex-direction:column;gap:18px;align-items:center}
+    .stat-card{
+      background:var(--card);
+      width:88%;
+      padding:20px 18px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(34,20,60,0.08);
+      display:flex;flex-direction:column;align-items:center;gap:8px;
+    }
+    .stat-card .label{color:var(--muted);font-weight:600}
+    .big{font-size:44px;font-weight:800;color:#0b0b0b;margin-top:4px}
+    .percentage{font-size:48px;font-weight:800;color:#000}
+    
+    .stat-card.small{padding:18px;border-radius:12px}
+    .muted{color:var(--muted);font-weight:600}
+
+    @media (max-width:420px){
+      .panel{padding:28px 18px}
+      .title{font-size:24px}
+      .big{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel" aria-labelledby="ctc-title">
+      <h1 id="ctc-title" class="title">Highest &amp; <br/>Average CTC</h1>
+
+      <div class="stack">
+        <div class="stat-card">
+          <div class="label">Expected Increase in<br/>Salary Potential</div>
+          <div class="percentage">60%</div>
+        </div>
+
+        <div class="stat-card small">
+          <div class="label">Average CTC</div>
+          <div class="big">₹6.1 LPA</div>
+        </div>
+
+        <div class="stat-card small">
+          <div class="label">Highest CTC</div>
+          <div class="big">₹36 LPA</div>
+        </div>
+
+        <div class="stat-card small">
+          <div class="label">(More stats)</div>
+          <div class="big">—</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
