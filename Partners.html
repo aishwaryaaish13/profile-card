@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Logo Tiles Grid</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg:#f3f8fb;
+      --tile:#ffffff;
+      --gap:22px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      padding:40px 24px;
+      color:#222;
+    }
+
+    .section {
+      max-width:1200px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0));
+      padding:28px 20px;
+      border-radius:14px;
+    }
+
+    .title {
+      font-size:18px;
+      color:#2b2b2b;
+      margin-bottom:18px;
+      font-weight:600;
+    }
+
+    
+    .band {
+      background: rgba(255,255,255,0.35);
+      border-radius:12px;
+      padding:20px;
+    }
+
+    .grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--gap);
+      justify-content:center;
+      align-items:center;
+      padding: 8px 12px;
+    }
+
+    .tile {
+      width:110px;            
+      height:90px;
+      border-radius:14px;
+      background:var(--tile);
+      box-shadow: 0 6px 14px rgba(18,35,63,0.07);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+      transition: transform .18s ease, box-shadow .18s ease;
+      flex: 0 0 auto;         
+    }
+
+    .tile:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(18,35,63,0.12);
+    }
+
+    .tile img {
+      max-width:78%;
+      max-height:62%;
+      object-fit:contain;
+      display:block;
+      filter: saturate(0.02) brightness(0.04) invert(0); 
+    }
+
+    .tile.colorful img { filter: none; }
+
+    
+    @media (max-width:900px){
+      .tile { width:92px; height:72px; }
+    }
+    @media (max-width:520px){
+      .tile { width:76px; height:60px; }
+      .grid { gap:14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="title">Our Partners</div>
+
+    <div class="band">
+      <div class="grid">
+        
+        <div class="tile"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Paytm_logo.png" alt="Paytm"></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Swiggy_logo.svg" alt="Swiggy"></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/CRED-logo.png" alt="Cred"></div>
+        <div class="tile"><img src="https://seeklogo.com/images/J/jio-logo-7F9139F6C2-seeklogo.com.png" alt="Jio"></div>
+        <div class="tile"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/IBM_logo.svg" alt="IBM"></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/OLA_logo.svg" alt="Ola"></div>
+        <div class="tile"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/NoBroker-logo.png" alt="NoBroker"></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Amazon_Web_Services_Logo.svg" alt="AWS"></div>
+
+        
+        <div class="tile"><img src="https://via.placeholder.com/120x40?text=Logo" alt=""></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/ShareChat_logo.png" alt="ShareChat"></div>
+        <div class="tile"><img src="https://via.placeholder.com/110x36?text=Brand" alt=""></div>
+        <div class="tile"><img src="https://via.placeholder.com/110x36?text=Brand" alt=""></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Flipkart_logo.png" alt="Flipkart"></div>
+        <div class="tile"><img src="https://via.placeholder.com/110x36?text=Brand" alt=""></div>
+        <div class="tile"><img src="https://via.placeholder.com/110x36?text=Brand" alt=""></div>
+        <div class="tile colorful"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Google_2015_logo.svg" alt="Google"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
