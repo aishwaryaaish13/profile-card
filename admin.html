@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management App - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Book Management</h1>
+            <button class="btn btn-secondary" onclick="location.href='index.html'">Back to Home</button>
+        </div>
+
+    
+        <div class="form-section">
+            <h2>Add a New Book</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="title" required placeholder="Enter book title">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required placeholder="Enter author name">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Technical">Technical</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Book</button>
+            </form>
+        </div>
+        <div class="controls-section">
+            <div class="sort-controls">
+                <label>Sort by Title:</label>
+                <button class="btn btn-small" onclick="sortBooks('asc')">A → Z</button>
+                <button class="btn btn-small" onclick="sortBooks('desc')">Z → A</button>
+            </div>
+
+            <div class="filter-controls">
+                <label for="filterCategory">Filter by Category:</label>
+                <select id="filterCategory" onchange="filterBooks()">
+                    <option value="All">All</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Technical">Technical</option>
+                </select>
+            </div>
+        </div>
+
+        
+        <div class="books-section">
+            <h2>Your Books</h2>
+            <div id="booksGrid" class="books-grid">
+        
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        
+        document.getElementById('bookForm').addEventListener('submit', addBook);
+        renderBooks();
+    </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+/* Home Container */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.home-content {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.home-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.home-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Form Styles */
+.form-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+#bookForm {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+#bookForm button {
+    margin-top: 10px;
+    padding: 12px;
+}
+
+/* Controls Section */
+.controls-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sort-controls,
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-controls label,
+.filter-controls label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.sort-controls button {
+    margin: 0 5px;
+}
+
+#filterCategory {
+    padding: 8px 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#filterCategory:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Books Section */
+.books-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.books-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Book Card Styles */
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #ecf0f1;
+}
+
+.book-card-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.book-card-author {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.book-card-category {
+    font-size: 12px;
+    display: inline-block;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.book-card-delete {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.book-card-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #95a5a6;
+}
+
+.empty-state p {
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .controls-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sort-controls,
+    .filter-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .sort-controls label,
+    .filter-controls label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .sort-controls {
+        width: 100%;
+    }
+
+    .sort-controls button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #filterCategory {
+        width: 100%;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .home-content {
+        padding: 30px;
+    }
+
+    .home-content h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-section,
+    .controls-section,
+    .books-section {
+        padding: 15px;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+}
